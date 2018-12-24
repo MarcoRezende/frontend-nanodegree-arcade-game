@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Effective JavaScript: Frogger</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
+	<p></p>
+	<div class="select-characters">
+		<h1>Select Your Character</h1>
+		<ul class="characters">
+			<li class="character"><img src="images/char-boy.png"></li>
+			<li class="character"><img src="images/char-cat-girl.png"></li>
+			<li class="character"><img src="images/char-horn-girl.png"></li>
+			<li class="character"><img src="images/char-pink-girl.png"></li>
+			<li class="character"><img src="images/char-princess-girl.png"></li>
+		</ul>
+	</div>
+	<div class="container">
+		<section class="score-panel">
+			<span class="level">Level
+				<span id="Level">1</span>
+			</span>
+			<ul class="hearts">
+        		<li><i class="fas fa-heart" id="Heart-1"></i></li>
+        		<li><i class="fas fa-heart" id="Heart-2"></i></li>
+        		<li><i class="fas fa-heart" id="Heart-3"></i></li>
+        	</ul>
+
+			<span id="Timer">00:00</span>
+			<span class="score">Score
+        		<span id="Score">0</span>
+        	</span>
+		</section>
+		<div id="Game"></div>
+	</div>
     <script src="js/resources.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>

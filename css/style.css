@@ -1,3 +1,88 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
     text-align: center;
+    font-family: 'Major Mono Display', monospace;
+    background-color: rgba(0,0,0,.5);
+    transition: all .2s;
+}
+
+.container {
+	width: 500px;
+	text-align: center;
+	margin: 0 auto;
+	opacity: 0;
+	transition: all .3s;
+	filter: blur(0);
+}
+
+canvas {
+	margin: -5px;
+	width: 500px;
+	display: none;
+}
+
+.score-panel {
+	text-align: left;
+	width: 100%;
+}
+
+#Timer {
+	float: right;
+}
+
+.score, .level {
+	margin-left: 20px;
+}
+
+.hearts {
+  display: inline-block;
+  margin: 0 12px 0 0;
+  float: right;
+}
+
+.hearts li {
+	display: inline-block;
+}
+
+.fas, .far {
+	color: #B20502;
+}
+
+.select-characters {
+
+}
+
+.characters {
+	text-align: center;
+	margin: 0 auto;
+	width: 600px;
+	background-color: #ddd;
+	border-radius: 5px;
+	padding: 0;
+	-webkit-box-shadow: 14px 16px 44px -4px rgba(0,0,0,1);
+	-moz-box-shadow: 14px 16px 44px -4px rgba(0,0,0,1);
+	box-shadow: 14px 16px 44px -4px rgba(0,0,0,1);
+}
+
+
+.character {
+	display: inline-block;
+	padding: 10px 0;
+}
+
+img {
+	width: 100%;
+	cursor: pointer;
+}
+
+img:hover {
+	background-color: #638FC2;
+	border-radius: 5px;
+	-webkit-box-shadow: 9px 5px 39px -7px rgba(0,0,0,1);
+	-moz-box-shadow: 9px 5px 39px -7px rgba(0,0,0,1);
+	box-shadow: 9px 5px 39px -7px rgba(0,0,0,1);
+	transition: all .3s;
 }

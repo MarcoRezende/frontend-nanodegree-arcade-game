@@ -12,6 +12,7 @@
  * This engine makes the canvas' context (ctx) object globally available to make
  * writing app.js a little simpler to work with.
  */
+// Função que executa o modal inicial e outras funções para dar inicio ao jogo
 
 var Engine = (function(global) {
     /* Predefine the variables we'll be using within this scope,
@@ -20,13 +21,14 @@ var Engine = (function(global) {
      */
     var doc = global.document,
         win = global.window,
+        divContainer = document.getElementById('Game'),
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
         lastTime;
 
     canvas.width = 505;
     canvas.height = 606;
-    doc.body.appendChild(canvas);
+    divContainer.appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -62,11 +64,13 @@ var Engine = (function(global) {
      * particularly setting the lastTime variable that is required for the
      * game loop.
      */
+
     function init() {
         reset();
         lastTime = Date.now();
         main();
     }
+
 
     /* This function is called by main (our game loop) and itself calls all
      * of the functions which may need to update entity's data. Based on how
@@ -173,7 +177,12 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/char-cat-girl.png',
+        'images/char-horn-girl.png',
+        'images/char-pink-girl.png',
+        'images/char-princess-girl.png',
+        'images/blank.png'
     ]);
     Resources.onReady(init);
 
