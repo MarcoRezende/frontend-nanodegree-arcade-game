@@ -1,8 +1,6 @@
 'use strict';
 
-let level = 0;
 let nextLevel = 2;
-let score = 0;
 let mtp = 250;
 let timer, duration, seconds, minutes, container;
 let characterSelected = "images/char-boy.png";
@@ -78,9 +76,9 @@ Enemy.prototype.update = function(dt) {
     if (player.x < this.x + 60 && player.x + 35 > this.x && player.y < this.y + 25 && 30 + player.y > this.y) {
         player.x = 200;
         player.y = 380;
-        player.life = player.life - 1
-        score -= 50;
-        $('#Score').text(score);
+        player.life -= 1
+        player.score -= 50;
+        $('#Score').text(player.score);
 
         // Diminuindo corações ao colidir
         if (player.life === 2) {
@@ -110,21 +108,23 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
-let Player = function(x, y, speed, life) {
+let Player = function(x, y, speed) {
     this.x = x;
     this.y = y;
     this.speed = speed;
     this.sprite = characterSelected;
     this.life = 3;
+    this.level = 0;
+    this.score = 0;
 }
 
 Player.prototype.update = function() {
     if (this.y < 0) {
         this.x = 200;
         this.y = 380;
-        level++;
-        score += 100;
-        $('#Score').text(score);
+        player.level++;
+        player.score = player.score + 100;
+        $('#Score').text(player.score);
         levelUp();
     }
 
@@ -191,7 +191,7 @@ document.addEventListener('keyup', function(e) {
 function restart() {
     swal({
         title: "Game Over :(",
-        text: `Time Played: ${minutes + ':' + seconds} | Score: ${score}`,
+        text: `Time Played: ${minutes + ':' + seconds} | Score: ${player.score}`,
         buttons: 'RESTART',
         allowOutsideClick: false,
         closeOnClickOutside: false,
@@ -202,9 +202,9 @@ function restart() {
             player.sprite = characterSelected;
             player = new Player(200, 380, 50);
             $( '.container' ).css('filter', 'blur(0)');
-            level = minutes = seconds = timer = 0;
+            player.level = minutes = seconds = timer = 0;
             nextLevel = 2;
-            score = 0;
+            player.score = 0;
             mtp = 250;
             player.life = 3;
             $('#Level').text(1);
@@ -217,7 +217,7 @@ function restart() {
 
 // Aumentando level ao chegar no fim 5 vezes
 function levelUp() {
-    if (level % 5 === 0) {
+    if (player.level % 5 === 0) {
         mtp += Math.floor(mtp * 0.05);
         $('#Level').text(nextLevel);
         nextLevel++;
