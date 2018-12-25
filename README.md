@@ -1,20 +1,15 @@
-# Classic Arcade Game Clone Project
+# Jogo de Fliperama Clássico
 
-## Table of Contents
+Neste clássico jogo de fliperama, seu objetivo é chegar até a região com água. Uma vez, duas vezes, três vezes... muitas vezes. Acumule pontos e bata seu recorde pessoal.
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+##Download
+Faça o download do jogo clicando no botão "Clone or download" ou clique [aqui](https://github.com/MarcoRezende/frontend-nanodegree-arcade-game/archive/master.zip).
 
-## Instructions
+## Jogue agora
+Jogue agora mesmo clicando [aqui](https://marcorezende.github.io/frontend-nanodegree-arcade-game/).
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
+## Dependencias
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
-
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
-
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+* jQuery
+* SweetAlert
+* Font Awesome
