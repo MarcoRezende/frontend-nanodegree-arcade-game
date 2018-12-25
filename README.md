@@ -2,7 +2,7 @@
 
 Neste clássico jogo de fliperama, seu objetivo é chegar até a região com água. Uma vez, duas vezes, três vezes... muitas vezes. Acumule pontos e bata seu recorde pessoal.
 
-##Download
+## Download
 Faça o download do jogo clicando no botão "Clone or download" ou clique [aqui](https://github.com/MarcoRezende/frontend-nanodegree-arcade-game/archive/master.zip).
 
 ## Jogue agora
@@ -10,6 +10,6 @@ Jogue agora mesmo clicando [aqui](https://marcorezende.github.io/frontend-nanode
 
 ## Dependencias
 
-* jQuery
-* SweetAlert
-* Font Awesome
+* [jQuery](https://jquery.com/)
+* [SweetAlert](https://sweetalert.js.org/)
+* [Font Awesome](https://fontawesome.com/)
