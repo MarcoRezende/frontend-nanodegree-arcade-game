@@ -15,9 +15,9 @@ $('img').click(function() {
     $( 'canvas' ).css('display', 'initial');
     $( 'body' ).css('background-color', '#fff');
     countdown();
-    generateEnemy()
+    generateEnemy();
     player = new Player(200, 380, 50);
-    $('.select-characters').remove()
+    $('.select-characters').remove();
 })
 
 // Temporizador
@@ -96,7 +96,7 @@ Enemy.prototype.update = function(dt) {
             player.sprite = 'images/blank.png';
             $('#Heart-1').removeClass('fas fa-heart').addClass('far fa-heart');
             $( '.container' ).css('filter', 'blur(5px)');
-            restart()
+            restart();
         }
     }
 };
@@ -125,7 +125,7 @@ Player.prototype.update = function() {
         level++;
         score += 100;
         $('#Score').text(score);
-        levelUp()
+        levelUp();
     }
 
     if (this.y > 380) {
@@ -220,6 +220,6 @@ function levelUp() {
     if (level % 5 === 0) {
         mtp += Math.floor(mtp * 0.05);
         $('#Level').text(nextLevel);
-        nextLevel++
-    }
+        nextLevel++;
+    };
 };
